@@ -15,11 +15,17 @@ public class CountSteps {
 		String file = "data/7Steps.csv";
 		File data = new File(file); 
 		Scanner scan = new Scanner(data);
-		
+		double[] array = new double[3];
+		int i = 0;
 		while(scan.hasNextLine()) {
 			String s = scan.nextLine();
 			String[] a = s.split(",");
-			System.out.println(a[2]);
+			array[i] = Double.parseDouble(a[2]);
+			System.out.println(z);
+		}
+		
+		while(scan.hasNextLine()) {
+			Peaks()
 		}
 		//scan.useDelimiter(",");
 		/*for(int i = 0; scan.hasNext(); i ++) {
@@ -33,10 +39,11 @@ public class CountSteps {
 		scan.close();
 	}
 	
-	public int Count() {
-		
-		
-		return 1;
+	public boolean Peaks(double a, double b, double c) {
+		if ((b>a)&&(b>c)){
+			return true;
+		}
+		else return false;
 	}
 	
 	
